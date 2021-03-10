@@ -1,0 +1,53 @@
+{{- /* Generate RSS v2 with summary page content. */ -}}
+{{- /* Upstream Hugo bug - RSS dates can be in future: https://github.com/gohugoio/hugo/issues/3918 */ -}}
+{{- $page_context := cond .IsHome site . -}}
+{{- $pages := where $page_context.RegularPages.ByDate "Type" "post" -}}
+{{- $limit := site.Config.Services.RSS.Limit -}}
+{{- $ttl_minutes := site.Params.Services.RSS.ttl_minutes -}}
+{{- if ge $limit 1 -}}
+  {{- $pages = $pages | first $limit -}}
+{{- end -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ if ne .Title site.Title }}{{ with .Title }}{{.}} | {{ end }}{{end}}{{ site.Title }}</title>
+    <link>{{ .Permalink }}</link>
+    {{- with .OutputFormats.Get "RSS" }}
+      {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{ end -}}
+    <description>{{ .Title | default site.Title }}</description>
+    <generator>Hugo (https://gohugo.io/) - Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    {{- with site.LanguageCode }}<language>{{.}}</language>{{end -}}
+    {{- with site.Copyright }}<copyright>{{ replace (replace . "{year}" now.Year) "&copy;" "©" | plainify }}</copyright>{{end -}}
+    {{- if not .Date.IsZero }}<lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end -}}
+    <ttl>{{ $ttl_minutes | default 1440 }}</ttl>
+    {{- if .Scratch.Get "og_image" }}
+    <image>
+      <url>{{ .Scratch.Get "og_image" }}</url>
+      <title>{{ .Title | default site.Title }}</title>
+      <link>{{ .Permalink }}</link>
+    </image>
+    {{end -}}
+    {{ range $pages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <guid>{{ .Permalink }}</guid>
+      <description>
+      {{- if site.Params.Services.RSS.ShowFullContent }}
+        {{ .Content | replaceRE "<div id=\"toc\">(.|\n)+?</div>" "" | html }}
+      {{ else }}
+        {{ $.Scratch.Set "summary" ((delimit (findRE "<p.*?>(.|\n)*?</p>" (replaceRE "<div id=\"toc\">(.|\n)+?</div>" "" .Content) 1) "") | truncate (default 500 site.Params.summary_truncate) (default "&hellip;" .Site.Params.text.truncated ) | replaceRE "&amp;" "&" | safeHTML) }}
+        {{- if .Params.Summary }}
+          {{ printf "%s%s%s" "<p>" .Params.Summary "</p>" | html }}
+        {{ else if .Params.Description }}
+          {{ printf "%s%s%s" "<p>" .Params.Description "</p>" | html }}
+        {{ end -}}
+        {{ $.Scratch.Get "summary" | html }}
+      {{ end }}
+      </description>
+    </item>
+    {{ end }}
+  </channel>
+</rss>

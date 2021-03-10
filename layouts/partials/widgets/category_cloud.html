@@ -1,0 +1,52 @@
+{{/* Pages Widget */}}
+
+{{/* Initialise */}}
+{{ $ := .root }}
+{{ $st := .page }}
+{{ $taxonomy := $st.Params.content.taxonomy | default "categories" }}
+{{ $fontSmall := $st.Params.design.font_size_min | default 0.8 }}
+{{ $fontBig := $st.Params.design.font_size_max | default 2.5 }}
+
+{{ $items_count := $st.Params.content.count }}
+{{ if eq $items_count 0 }}
+  {{ $items_count = 65535 }}
+{{ else }}
+  {{ $items_count = $items_count | default 20 }}
+{{ end }}
+
+{{/* Query */}}
+{{ $total_count := len (index site.Taxonomies $taxonomy).ByCount }}
+{{ $categories := first $items_count (index site.Taxonomies $taxonomy).ByCount }}
+{{ $count := len $categories }}
+
+<div class="row">
+  <div class="col-12 col-lg-4 section-heading">
+    <h1>{{ with $st.Title }}{{ . | markdownify | emojify }}{{ end }}</h1>
+    {{ with $st.Params.subtitle }}<p>{{ . | markdownify | emojify }}</p>{{ end }}
+    {{ if le $items_count $total_count }}
+      <a href="/{{ $taxonomy }}/" class="taxonomy-full-list" title="All {{ title $taxonomy }}">All {{ title $taxonomy }}</a>
+    {{ end }}
+  </div>
+  <div class="col-12 col-lg-8">
+    {{ with $st.Content }}{{ . }}{{ end }}
+
+    {{ if ne $count 0 }}
+
+      {{ $fontDelta := sub $fontBig $fontSmall }}
+      {{ $min := len (index ($categories).Reverse 0).Pages }}
+      {{ $max := add (len (index $categories 0).Pages) 1 }}
+      {{ $delta := sub $max $min }}
+      {{ $fontStep := div $fontDelta $delta }}
+
+      <div class="tag-cloud">
+        {{ range $name, $term := (sort $categories ".Page.Title" "asc") }}
+          {{ $categoryCount := len $term.Pages }}
+          {{ $weight := div (sub (math.Log $categoryCount) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
+          {{ $fontSize := add $fontSmall (mul (sub $fontBig $fontSmall) $weight) }}
+          <a href="{{ .Page.RelPermalink }}" style="font-size:{{ $fontSize }}rem">{{ .Page.Title }}</a>
+        {{ end }}
+      </div>
+    {{ end }}
+
+  </div>
+</div>

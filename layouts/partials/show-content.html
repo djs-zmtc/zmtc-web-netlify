@@ -1,0 +1,8 @@
+{{ $hasToc := findRE "<div id=\"toc\">" .Content 1 }}
+{{ if ge $hasToc 1 }}
+    {{ "<!-- add back-to-toc -->" | safeHTML }}
+    {{ .Content | replaceRE "(<h[2-6] id=\"([^\"]+)\">)(.+)(</h[2-6]+>)" `${1}${3}&nbsp;<a class="back-to-toc" title="Back to Table of Contents" href="#toc"><i class="fas fa-caret-up"></i></a>${4}` | safeHTML }}
+{{ else }}
+    {{ "<!-- no ToC -->" | safeHTML }}
+    {{ .Content }}
+{{ end }}

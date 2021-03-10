@@ -14,14 +14,14 @@ baseurl = "https://zmtcreative.netlify.app/"
 
 # Enter a copyright notice to display in the site footer.
 # To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
-copyright = ""
+copyright = "&copy; {year} ZMT Creative LLC"
 
 ############################
 ## Advanced options below ##
 ############################
 
 # Get last modified date for content from Git?
-enableGitInfo = false
+enableGitInfo = true
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
@@ -42,6 +42,7 @@ disableAliases = true  # Disable aliases when `redirects` is added to the `outpu
   authors = "/author/:slug/"
   tags = "/tag/:slug/"
   categories = "/category/:slug/"
+  post = "/:sections/:slug/"
 
 [outputs]
   home = ["HTML", "RSS", "JSON", "WebAppManifest", "headers", "redirects"]

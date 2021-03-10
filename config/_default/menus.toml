@@ -9,6 +9,62 @@
   weight = 10
 
 [[main]]
-  name = "About"
-  url = "about/"
+  name = "Recent<br>Posts"
+  url = "#posts"
+  pre = "<i class='far fa-newspaper'></i>&nbsp;"
   weight = 20
+
+[[main]]
+  name = "Image<br>Gallery"
+  url = "/gallery/"
+  pre = "<i class='fas fa-images'></i>&nbsp;"
+  weight = 30
+
+[[main]]
+  name = "Popular<br>Categories"
+  url = "/categories/"
+  pre = "<i class='fas fa-folder'></i>&nbsp;"
+  weight = 54
+
+[[main]]
+  name = "Popular<br>Tags"
+  url = "/tags/"
+  pre = "<i class='fas fa-tags'></i>&nbsp;"
+  weight = 55
+
+[[main]]
+  name = "Info"
+  identifier = "info"
+  pre = "<i class='fas fa-info-circle'></i>&nbsp;&nbsp;"
+  weight = 60
+
+[[main]]
+  name = "About"
+  url = "/about/"
+  weight = 1
+  parent = "info"
+
+# [[main]]
+#   name = "Contact"
+#   url = "#contact"
+#   weight = 5
+#   parent = "info"
+
+[[main]]
+  name = "FAQ"
+  url = "/faq/"
+  weight = 7
+  parent = "info"
+
+[[main]]
+  name = "Privacy Policy"
+  url = "/privacy-policy/"
+  weight = 10
+  parent = "info"
+
+[[main]]
+  name = "Terms & Conditions"
+  url = "/terms-and-conditions/"
+  weight = 15
+  parent = "info"
+
