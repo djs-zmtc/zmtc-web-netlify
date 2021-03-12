@@ -9,8 +9,8 @@
   weight = 10
 
 [[main]]
-  name = "Recent<br>Posts"
-  url = "#posts"
+  name = "All<br>Posts"
+  url = "/allposts/"
   pre = "<i class='far fa-newspaper'></i>&nbsp;"
   weight = 20
 
@@ -20,17 +20,17 @@
   pre = "<i class='fas fa-images'></i>&nbsp;"
   weight = 30
 
-[[main]]
-  name = "Popular<br>Categories"
-  url = "/categories/"
-  pre = "<i class='fas fa-folder'></i>&nbsp;"
-  weight = 54
+# [[main]]
+#   name = "Popular<br>Categories"
+#   url = "/categories/"
+#   pre = "<i class='fas fa-folder'></i>&nbsp;"
+#   weight = 54
 
-[[main]]
-  name = "Popular<br>Tags"
-  url = "/tags/"
-  pre = "<i class='fas fa-tags'></i>&nbsp;"
-  weight = 55
+# [[main]]
+#   name = "Popular<br>Tags"
+#   url = "/tag_cloud/"
+#   pre = "<i class='fas fa-tags'></i>&nbsp;"
+#   weight = 55
 
 [[main]]
   name = "Info"

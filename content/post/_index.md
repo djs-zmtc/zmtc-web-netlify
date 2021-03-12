@@ -1,6 +1,6 @@
 ---
-title: Posts
-cms_exclude: true
+title: Posts & Articles
+breadcrumb: Posts
 
 # View.
 #   1 = List
@@ -8,7 +8,7 @@ cms_exclude: true
 #   3 = Card
 view: 2
 
-# Optional header image (relative to `static/media/` folder).
+# Optional header image (relative to `static/img/` folder).
 header:
   caption: ""
   image: ""

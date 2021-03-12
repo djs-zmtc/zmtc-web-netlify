@@ -11,6 +11,7 @@ date: 2020-01-07T06:45:01-05:00
 lastmod: 2020-01-07T07:35:01-05:00
 featured: false
 draft: false
+expiryDate: 2020-12-31T23:59:59-05:00
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -32,6 +33,6 @@ As we ring in the new year of 2020, I've seen many dire warnings about abbreviat
 
 In a nutshell, abbreviating the year to '20' makes it trivially easy for someone to alter the date by just adding two more digits to the '20'. So a contract you signed and dated '1/4/20' could be altered to show a signing date of '1/4/2019'. Or an uncashed check with the same date could (in theory) be altered to show '1/4/2021' and be cashed later, even though you thought it had expired and was no longer valid.
 
-However, as Snopes notes ([Should You Avoid Writing This Year as ’20’ on Checks?](https://www.snopes.com/news/2020/01/03/avoid-writing-year-2020-as-20/)), experts are divided on the topic. While it is true that abbreviating the year as '20' makes it easy to alter the year on a document, scammers have always had multiple ways to fraudulently alter documents. 
+However, as Snopes notes ([Should You Avoid Writing This Year as ’20’ on Checks?](https://www.snopes.com/news/2020/01/03/avoid-writing-year-2020-as-20/)), experts are divided on the topic. While it is true that abbreviating the year as '20' makes it easy to alter the year on a document, scammers have always had multiple ways to fraudulently alter documents.
 
 In my opinion (and as a matter of habit on my part) it is probably a good idea to **never** abbreviate the year on legally-binding documents, regardless of the year in question. Better safe than sorry.

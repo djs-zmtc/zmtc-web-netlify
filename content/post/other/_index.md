@@ -1,7 +1,7 @@
 ---
-title: Opinions & Editorials
-breadcrumb: Op-Ed
-weight: 1516
+title: Other Topics
+breadcrumb: Other
+weight: 9999
 
 # View.
 #   1 = List

@@ -1,6 +1,8 @@
 ---
 title: Technology & Engineering
 breadcrumb: Tech-Eng
+weight: 2005
+headless: true
 
 # View.
 #   1 = List
