@@ -12,6 +12,7 @@ date: 2019-10-07T15:51:59-04:00
 lastmod: 2019-10-07T15:51:59-04:00
 featured: false
 draft: false
+expiryDate: 2020-12-31T23:59:59-05:00
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
