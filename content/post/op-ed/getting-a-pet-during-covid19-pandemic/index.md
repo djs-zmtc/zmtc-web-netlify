@@ -1,15 +1,15 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Getting a Pet During the COVID-19 Pandemic"
+title: "Getting a Pet During the COVID-19 Pandemic [Updated]"
 subtitle: "The long-term consequences of pet adoption during a crisis"
-summary: "A surge in pet adoptions during the COVID-19 pandemic lockdown is creating a potential nightmare for pet rescue services in the coming months."
+summary: "A surge in pet adoptions during the COVID-19 pandemic lockdown is creating a nightmare for pet rescue services."
 authors: [djsweeney]
 slug: "getting-a-pet-during-covid19-pandemic"
 tags: ["Pets","Dogs","Cats","Pandemic","COVID-19","Opinion"]
 categories: ["Opinion"]
 date: 2020-05-01T10:57:09-04:00
-lastmod: 2020-05-01T10:57:09-04:00
+lastmod: 2021-04-20T14:30:00-04:00
 aliases:
   - /post/op-ed/getting-a-pet-during-the-covid-19-pandemic/
 featured: false
@@ -26,7 +26,17 @@ image:
 
 ---
 
-One of the feel-good stories during the COVID-19 Pandemic has been the enormous surge in pet adoptions over the last several months. Pet shelters have been reporting major jumps in the number of animals being adopted, while entire states are under stay-at-home orders. This is a pleasant side effect of an otherwise nasty situation. It’s good for the pet(s) and good for the mental and emotional well-being of individuals and families locked away in their homes.
+{{< notice update >}}
+*April 20, 2021* -- As feared, pet shelters around the world have been reporting spikes in abandoned pets. As noted in the original post below, the surge in new adoptions was almost inevitably going to lead to this spike in homeless pets. Whether due to a loss of interest in keeping the new pets, or financial hardships that required abandoning the pets, pet shelters are now struggling to handle the increase in pets that need homes.
+
+Even family pets that were adopted years before the pandemic are being forced into shelters or abandoned simply because the loss of income and lack of unemployment benefits have made it difficult or impossible for families to keep their cherished pets.
+
+If you cannot adopt one of these pets, please find your local shelter(s) and donate what little you can in time or money to help.
+{{< /notice >}}
+
+*Original Post -- May 1, 2020*
+
+One of the feel-good stories during the COVID-19 Pandemic has been the enormous surge in pet adoptions over the last several months. Pet shelters have been reporting major jumps in the number of animals being adopted while entire states are under stay-at-home orders. This is a pleasant side effect of an otherwise nasty situation. It’s good for the pet(s) and good for the mental and emotional well-being of individuals and families locked away in their homes.
 
 But there could also be an unfortunate long-term consequence of so many adoptions in such a brief period during a pandemic crisis. Every year there are surges of pet adoptions around the Christmas holiday, followed by similar increases in pets being abandoned to shelters in the spring and summer as that “cute puppy” becomes a rambunctious adolescent, grows bigger than expected, or becomes too hard to handle.
 
