@@ -14,3 +14,15 @@
 
 [context.branch-deploy]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[[redirects]]
+  from = "https://www.zmtcreative.com/*"
+  to = "https://www.zmtcreative.net/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://zmtcreative.com/*"
+  to = "https://zmtcreative.net/:splat"
+  status = 301
+  force = true
