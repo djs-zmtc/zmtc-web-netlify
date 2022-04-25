@@ -1,11 +1,20 @@
-{{/* Do not directly modify this file! */}}
-{{/* Instead, create a `layout/partials/custom_head.html` file in your site and add your code to it. */}}
+{{/* Customized `custom_head.html` */}}
 
 {{ with .Params.robotsdisallow }}<meta name="robots" content="noindex, nofollow, noarchive">{{ end }}
 
 {{/* This partial is included in `themes/academic/layout/partials/site_head.html`. */}}
 <script data-ad-client="ca-pub-8573573240496854" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 {{/* <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>  */}}
-<script> 
-(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "pub-8573573240496854", enable_page_level_ads: true}); 
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "pub-8573573240496854", enable_page_level_ads: true});
+</script>
+
+{{/* Google Analytics 4 tags */}}
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BQJ01MVRN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9BQJ01MVRN');
 </script>
