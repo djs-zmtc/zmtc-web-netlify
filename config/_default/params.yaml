@@ -30,6 +30,12 @@ marketing:
 header:
   navbar:
     enable: true
+    blox: navbar
+    align: center
+    fixed_to_top: true
+    logo:
+      text: ''
+      filename: 'logo.png'
     show_search: true
     show_theme_chooser: true
 

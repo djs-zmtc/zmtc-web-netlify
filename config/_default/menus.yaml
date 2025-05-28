@@ -6,11 +6,11 @@ main:
     url: /
     weight: 10
   - name: All Posts
-    url: /allposts/
+    url: allposts/
     pre: <i class='far fa-newspaper'></i>&nbsp;
     weight: 20
   - name: Image Gallery
-    url: /gallery/
+    url: gallery/
     pre: <i class='fas fa-images'></i>&nbsp;
     weight: 30
   - name: Info
@@ -18,18 +18,18 @@ main:
     pre: <i class='fas fa-info-circle'></i>&nbsp;
     weight: 60
   - name: About
-    url: /about/
+    url: about/
     parent: info
     weight: 1
   - name: FAQ
-    url: /faq/
+    url: faq/
     weight: 7
     parent: info
   - name: Privacy Policy
-    url: /privacy-policy/
+    url: privacy-policy/
     weight: 10
     parent: info
   - name: Terms and Conditions
-    url: /terms-and-conditions/
+    url: terms-and-conditions/
     weight: 15
     parent: info
