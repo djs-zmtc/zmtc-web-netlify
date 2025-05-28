@@ -5,11 +5,11 @@ main:
   - name: Home
     url: /
     weight: 10
-  - name: All<br>Posts
+  - name: All Posts
     url: /allposts/
     pre: <i class='far fa-newspaper'></i>&nbsp;
     weight: 20
-  - name: Image<br>Gallery
+  - name: Image Gallery
     url: /gallery/
     pre: <i class='fas fa-images'></i>&nbsp;
     weight: 30
