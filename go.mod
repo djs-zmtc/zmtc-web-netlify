@@ -1,8 +1,8 @@
-module github.com/wowchemy/starter-blog
+module github.com/HugoBlox/hugo-blox-builder/starters/blog
 
-go 1.14
+go 1.19
 
 require (
-	github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20210602222123-e9d82a242153 // indirect
-	github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms v0.0.0-20210602222123-e9d82a242153 // indirect
+	github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify v1.1.2
+	github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind v0.3.2
 )
