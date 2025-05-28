@@ -74,12 +74,12 @@ markup:
   defaultMarkdownHandler: goldmark
   goldmark:
     renderer:
-      - unsafe: true
+      unsafe: true
   highlight:
-    - codeFences: false
+    codeFences: false
   tableOfContents:
-    - startLevel: 2
-    - endLevel: 3
+    startLevel: 2
+    endLevel: 3
   _merge: deep
 related:
   threshold: 80
