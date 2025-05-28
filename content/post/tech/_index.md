@@ -8,7 +8,7 @@ headless: true
 #   1 = List
 #   2 = Compact
 #   3 = Card
-view: 2
+view: card
 reading_time: false
 nometa: true
 
