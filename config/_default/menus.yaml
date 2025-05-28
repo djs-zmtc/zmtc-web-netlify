@@ -1,0 +1,35 @@
+# Navigation Links
+#   The weight parameter defines the order that the links will appear in.
+
+main:
+  - name: Home
+    url: /
+    weight: 10
+  - name: All<br>Posts
+    url: /allposts/
+    pre: <i class='far fa-newspaper'></i>&nbsp;
+    weight: 20
+  - name: Image<br>Gallery
+    url: /gallery/
+    pre: <i class='fas fa-images'></i>&nbsp;
+    weight: 30
+  - name: Info
+    identifier: info
+    pre: <i class='fas fa-info-circle'></i>&nbsp;
+    weight: 60
+  - name: About
+    url: /about/
+    parent: info
+    weight: 1
+  - name: FAQ
+    url: /faq/
+    weight: 7
+    parent: info
+  - name: Privacy Policy
+    url: /privacy-policy/
+    weight: 10
+    parent: info
+  - name: Terms and Conditions
+    url: /terms-and-conditions/
+    weight: 15
+    parent: info
