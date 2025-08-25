@@ -1,6 +1,6 @@
 ---
 # Display name
-name: ZMT Creative
+name: ZMT Creative Admin
 
 # Username (this should match the folder name)
 authors:
@@ -15,7 +15,7 @@ role: ""
 # Organizations/Affiliations
 organizations:
 - name: "ZMT Creative LLC"
-  url: ""
+  url: "https://www.zmtcreative.com"
 
 # Short bio (displayed in user profile at end of posts)
 bio:
@@ -44,13 +44,13 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:info@zmtc.co'  # For a direct email link, use "mailto:test@example.org".
-- icon: facebook
-  icon_pack: fab
-  link: https://www.facebook.com/zmtcreativeblog
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/company/zmtcreative
+  link: 'mailto:info@zmtcreative.com'  # For a direct email link, use "mailto:test@example.org".
+# - icon: facebook
+#   icon_pack: fab
+#   link: https://www.facebook.com/zmtcreativeblog
+# - icon: linkedin
+#   icon_pack: fab
+#   link: https://www.linkedin.com/company/zmtcreative
 # - icon: twitter
 #   icon_pack: fab
 #   link: https://twitter.com/GeorgeCushen
@@ -80,4 +80,19 @@ user_groups:
 # - Visitors
 ---
 
-ZMT Creative LLC is a small design firm located in Central Florida. We publish this blog and will (soon) be providing a range of freely available media, including images, clip art and audio. All material provided on this site is either owned by ZMT Creative LLC or licensed for use by the content owners (or is otherwise free for re-use, where indicated).
+ZMT Creative LLC is a small firm located in Central Florida. We publish this blog and
+provide a range of freely available media, including images, clip art and audio. All material
+provided on this site is either owned by ZMT Creative LLC or licensed for use by the content owners
+(or are otherwise free for re-use, where indicated). We also do application development.
+
+## Contact Information
+
+> Douglas Sweeney<br/>
+> Managing Member & Owner<br/>
+>
+> ZMT Creative LLC<br/>
+> 4948 Cape Hatteras Dr<br/>
+> Clermont, FL  34714
+>
+> **Email:** [zmtcreative@zmtcreative.com](mailto:zmtcreative@zmtcreative.com)<br/>
+> **Phone:** 321-246-1669
