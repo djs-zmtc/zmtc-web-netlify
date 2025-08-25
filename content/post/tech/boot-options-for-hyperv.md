@@ -4,10 +4,10 @@ summary: "A method to switch Hyper-V Services on and off by setting up multiple 
 slug: "switching-hyper-v-on-and-off-using-boot-options"
 type: "post"
 date: 2019-09-26T09:32:15-04:00
-lastmod: 2020-05-21T16:47:00-04:00
+lastmod: 2025-08-25T17:00:00-04:00
 draft: false
 authors: ["djsweeney"]
-aliases: 
+aliases:
     - /2019/09/switching-hyper-v-on-and-off-using-boot-options/
     - /posts/tech/switching-hyper-v-on-and-off-using-boot-options/
 categories: ["Technology"]
@@ -18,13 +18,19 @@ This document provides instructions for setting up your Windows 10 environment t
 
 {{< toc >}}
 
+## Update (2025-08-25)
+
+The scripts and procedures below will generally **NOT** work reliably with Windows 11. Many built-in security features in Windows 11 utilize virtualization services independent of whether the `hypervisor` is enabled at boot time. It *IS* possible to disable all these new features, but the potential headaches **that** path creates is not something I intend to repeat.
+
+Since this document was created six years ago, both `VirtualBox` and `VMWare` are much better at coexisting with `Hyper-V` features enabled, though there is still a performance hit.
+
 ## Overview
 
 {{< notice warning >}}
 The instructions in this document were written and tested **only** on Windows&nbsp;10&nbsp;Pro!
- 
+
 Hyper-V is **not** supported on Windows&nbsp;10&nbsp;Home.
- 
+
 Windows 10 Enterprise enables additional features that may create additional issues (see [Blue Screen of Death (BSOD) when starting any VM (No HyperV) on Windows 10 Host](https://forums.virtualbox.org/viewtopic.php?f=6&t=86476) forum topic). The method described in this document **may** work with Windows 10 Enterprise, but I don't have access to this version and therefore cannot test it.
 {{< /notice >}}
 
@@ -64,8 +70,8 @@ Here's how to set this up...
 
 {{< notice disclaimer disclaimer >}}
 **READ THIS FIRST:**
-I have tested the following procedures and script(s) on several of my computers without any problems. However, since I cannot predict every possible scenario, **you use these instructions and script(s) at your own risk** -- I assume **no** responsibility for any problems you may encounter even if you follow the instructions exactly! 
-  
+I have tested the following procedures and script(s) on several of my computers without any problems. However, since I cannot predict every possible scenario, **you use these instructions and script(s) at your own risk** -- I assume **no** responsibility for any problems you may encounter even if you follow the instructions exactly!
+
 **Read this document carefully** -- you are modifying settings that control your boot process!<br>**If you mess something up, you may not be able to boot at all!**
 {{< /notice >}}
 
@@ -77,7 +83,7 @@ I have tested the following procedures and script(s) on several of my computers 
 
 {{< notice important >}}
 The modifications you make using BCDEDIT may be lost/reverted after any Windows&nbsp;10 Feature&nbsp;Upgrade (e.g. upgrading from Windows&nbsp;10&nbsp;1809 to 1903). It appears that the Feature Upgrades revert the Boot Configuration to "safe" settings, which seems to remove the 'hypervisorlaunchtype' = 'Off' setting if you've set it up below.
-  
+
  If Hyper-V was already turned on before the Feature Upgrade, it will remain turned on after a Feature Upgrade, so you will **not** have to re-enable it in `Turn Windows Features On or Off`. But you **will** (probably) need to repeat steps 1-6 below to set up the Boot menus to set 'hypervisorlaunchtype'.
 {{< /notice >}}
 
@@ -108,7 +114,7 @@ based on the ISO&nbsp;8601 standard  -- YYYYMMDD**T**hhmm. You can use any namin
 ### Step 2
 
 {{< notice remember >}}
-This step assumes that you have installed Hyper-V (in Windows 
+This step assumes that you have installed Hyper-V (in Windows
 Features -- see [Assumptions](#assumptions)) **and** that you have
 booted/rebooted after turning on Hyper-V so it is currently running.
 {{< /notice >}}
@@ -175,7 +181,7 @@ If you use the `reboot-hyperv.ps1` script (see below), it will only look for the
 
 ## Powershell script
 
-Assuming you have successfully followed the instructions in this document, the following Powershell script can be used to Enable/Disable the Hyper-V service on the next reboot. You can run this from a Powershell prompt or you can create shortcuts to run the script (one shortcut to Enable and one shortcut to Disable).  
+Assuming you have successfully followed the instructions in this document, the following Powershell script can be used to Enable/Disable the Hyper-V service on the next reboot. You can run this from a Powershell prompt or you can create shortcuts to run the script (one shortcut to Enable and one shortcut to Disable).
 
 {{< notice important >}}You **must** run this script as an administrator.{{< /notice >}}
 
