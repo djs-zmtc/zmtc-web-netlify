@@ -14,6 +14,7 @@ aliases:
   - /post/op-ed/getting-a-pet-during-the-covid-19-pandemic/
 featured: false
 draft: false
+expiryDate: 2022-01-01T00:00:00-04:00
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
